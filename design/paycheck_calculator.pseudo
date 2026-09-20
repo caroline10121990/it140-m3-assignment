@@ -10,15 +10,17 @@
 
 START paycheck_calculator
 
-    TODO: Obtain the required program input.
+    INPUT hoursWorked
 
-    IF TODO: Specify the condition for the applicable pay rule.
-        TODO: List the processing steps for the true decision path.
+    IF hoursWorked > 40 THEN
+    overtimeHours = hoursWorked - 40
+    totalPay = (40 * 20) + (overtimeHours * 30)
+
     ELSE
-        TODO: List the processing steps for the false decision path.
-    ENDIF
+        totalPay = hoursWorked * 20
+    END IF
 
-    TODO: Output the calculated weekly paycheck.
+    OUTPUT totalPay
 
 END paycheck_calculator
 
